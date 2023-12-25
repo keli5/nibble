@@ -15,21 +15,42 @@ datasource db {
 
 model GuildModules {
   guildId String @id
+  guild   Guild  @relation(fields: [guildGuildId], references: [guildId])
 
   nicknameLogger Boolean @default(true)
   serverExp      Boolean @default(false)
+  guildGuildId   String
 }
 
 model GuildMember {
   userId  String
   guildId String
+  guild   Guild  @relation(fields: [guildGuildId], references: [guildId])
 
-  exp       Int @default(0)
-  level     Int @default(1)
+  exp   Int @default(0)
+  level Int @default(1)
 
-  nicknames Nickname[]
+  nicknames    Nickname[]
+  guildGuildId String
 
   @@id([userId, guildId])
+}
+
+model Guild {
+  guildId String @id
+
+  Channels      Channel[]
+  GuildModules  GuildModules[]
+  GuildMembers  GuildMember[]
+}
+
+model Channel {
+  channelId String @id
+
+  markov Boolean
+
+  guild        Guild  @relation(fields: [guildGuildId], references: [guildId])
+  guildGuildId String
 }
 
 model Nickname {

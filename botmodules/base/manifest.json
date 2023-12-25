@@ -1,4 +1,5 @@
 {
     "name": "Base",
-    "desc": "This module contains events and commands essential to Nibble. Cannot be disabled."
+    "desc": "This module contains events and commands essential to Nibble. Cannot be disabled.",
+    "shortdesc": "Base events and commands."
 }

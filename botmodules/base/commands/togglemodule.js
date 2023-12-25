@@ -48,7 +48,17 @@ module.exports = {
                 [module.db]: !moduleEnabled
             },
             create: {
-                guildId: message.guildID
+                guildId: message.guildID,
+                guild: {
+                    connectOrCreate: {
+                        where: {
+                            guildId: message.guildID
+                        },
+                        create: {
+                            guildId: message.guildID
+                        }
+                    }   
+                }
             }
         })
 
