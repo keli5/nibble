@@ -21,8 +21,6 @@ module.exports = {
             type: 0
         })
     
-        changeStatus(bot, statusList)
-    
         changeInterval = setInterval(changeStatus, 2 * 60 * 1000, bot, statusList)
     
     }
