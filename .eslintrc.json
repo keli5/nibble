@@ -1,0 +1,13 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "semi": ["off", "always"]
+    },
+    "extends": "eslint:recommended"
+}
