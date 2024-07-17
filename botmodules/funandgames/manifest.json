@@ -1,0 +1,6 @@
+{
+    "name": "Fun & Games",
+    "desc": "This module contains the balance functionality as well as some games like jackpot, wheel and slots.",
+    "enabledMessage": "Users can now gain, gamble to win/lose, and trade money, as well as check their balance with bal.",
+    "disabledMessage": "Balance and money-related commands and games will no longer work in this server."
+}

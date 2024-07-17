@@ -17,17 +17,23 @@ model GuildModules {
   guildId String  @id
   prefix  String? @default(")")
 
-  nicknameLogger Boolean @default(false)
-  serverExp      Boolean @default(false)
-  starboard      Boolean @default(false)
+  nicknameLogger Boolean   @default(false)
+  serverExp      Boolean   @default(false)
+  starboard      Boolean   @default(false)
+  funandgames    Boolean   @default(false)
+  markov         Boolean   @default(false)
+
+
+  channels        Channel[]
 }
 
 model GuildMember {
   userId  String
   guildId String
 
-  exp   Int @default(0)
-  level Int @default(1)
+  exp     Int @default(0)
+  level   Int @default(1)
+  balance BigInt @default(0)
 
   nicknames Nickname[]
 
@@ -57,4 +63,12 @@ model StarredMessage {
   messageId String @id @unique
 
   starboardMessageId String?
+}
+
+model Channel {
+  id            String  @id @unique
+  markovAllowed Boolean @default(true)
+
+  guild   GuildModules @relation(fields: [guildId], references: [guildId])
+  guildId String
 }

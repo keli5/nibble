@@ -1,0 +1,6 @@
+{
+    "name": "Markov",
+    "desc": "This module allows Nibble to speak based on messages it's seen in the past (from a curated, mostly trusted set of servers.)",
+    "enabledMessage": "Nibble can now randomly speak based on past messages it's seen.",
+    "disabledMessage": "Nibble can no longer randomly speak based on past messages it's seen."
+}

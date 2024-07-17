@@ -4,3 +4,6 @@ node_modules
 config.json
 package-lock.json
 .vscode
+
+# markov model
+model.json
